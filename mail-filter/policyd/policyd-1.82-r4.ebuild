@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}"/${PN}-post182.patch
 	"${FILESDIR}"/${PN}-makefile.patch
+	"${FILESDIR}"/${PN}-1.82-gcc15-fix-func-fold.patch
 )
 
 src_prepare() {
