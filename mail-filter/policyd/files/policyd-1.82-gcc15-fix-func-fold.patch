@@ -1,0 +1,24 @@
+diff '--color=auto' -Nudr policyd-1.82-orig/generic.c policyd-1.82/generic.c
+--- policyd-1.82-orig/generic.c	2007-08-20 14:42:05.000000000 +0800
++++ policyd-1.82/generic.c	2026-06-04 14:41:24.149173479 +0700
+@@ -1087,7 +1087,7 @@
+  *    return: nada
+  */
+ void
+-fold()
++fold(int)
+ {
+   logmessage("shutting down..\n");
+   shutdown(msock, SHUT_RDWR);
+diff '--color=auto' -Nudr policyd-1.82-orig/policyd.h policyd-1.82/policyd.h
+--- policyd-1.82-orig/policyd.h	2007-08-20 14:42:05.000000000 +0800
++++ policyd-1.82/policyd.h	2026-06-04 14:41:12.650472899 +0700
+@@ -273,7 +273,7 @@
+  void usage(char *usag);
+  void clear_var(unsigned int fd);
+  void parse_buf(unsigned int fd, char *buf);
+- void fold();
++ void fold(int);
+  void extract (unsigned int fd, char *token, unsigned int startlen);
+  void extract_ip(unsigned int fd, char *token);
+  void extract_ipfill(unsigned int fd, char *token);
